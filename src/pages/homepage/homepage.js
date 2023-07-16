@@ -10,6 +10,7 @@ import ModalWindows from "../../components/modalWindows/modalWindows";
 import Background from "../../components/background/background";
 import WelcomeForm from "../../components/welcomeForm/welcomeForm";
 import "./homepage.css"
+import Slider from "../../components/slider/slider";
 const Homepage =()=> {
   
     const window = useSelector((state) => state.toolkit.window);
@@ -21,6 +22,7 @@ const Homepage =()=> {
 <ModalWindows /> 
 <Background /> 
 <WelcomeForm />
+<Slider />
 <Footer /> 
         </div>
     )

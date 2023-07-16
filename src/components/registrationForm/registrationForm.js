@@ -1,4 +1,5 @@
 import "./registrationForm.css"
+import { Link } from "react-router-dom";
 import Captcha from "../captcha/captcha";
 const RegistrationForm =()=> {
     return (
@@ -9,11 +10,13 @@ const RegistrationForm =()=> {
             <input type="password" placeholder="Введите пароль" className="typePassword  regItem" />
            <Captcha />
             <button className="registrationFormBtn ">Зарегистрироваться</button>
+            <div className="haveAnAccount"><Link style={{textDecoration: "none", color: "#fff"}} to="/login">Есть аккаунт?</Link></div>
             <div className="agreement">
             <input type="checkbox" className="agreementBtn" />
             <p className="agreementText">Я принимаю согласие на обработку пользовательских данных</p>
             </div>
             </div>
+
             <div className="registrationFormCube cube1"></div>
             <div className="registrationFormCube  cube2"></div>
             <div className="registrationFormCube cube3"></div>

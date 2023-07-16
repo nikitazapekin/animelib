@@ -42,9 +42,10 @@ z-index: 100;
     border-radius: 10px;
     background-color: rgb(4, 8, 254);
     color: #fff;
-    position: absolute;
+
+   /* position: absolute; 
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);  */
     width: 200px;
     height: 40px;
     text-align: center;

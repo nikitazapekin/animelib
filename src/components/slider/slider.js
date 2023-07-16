@@ -1,85 +1,156 @@
+import { useState, useRef, useEffect } from "react"
 import "./slider.css"
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+const Slider =()=> {
+    return (
+        <div className="slider">
 
-class Carousel extends React.Component {
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+
+
     
-    constructor(props) {
-        super(props)
-        this.state = {
-            items: this.props.items,
-            active: this.props.active,
-            direction: ''
-        }
-        this.rightClick = this.moveRight.bind(this)
-        this.leftClick = this.moveLeft.bind(this)
-    }
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+    <div className="sliderItem"></div>
+ 
+        </div>
+    )
+}
+export default Slider;
 
-    generateItems() {
-        var items = []
-        var level
-        console.log(this.state.active)
-        for (var i = this.state.active - 2; i < this.state.active + 3; i++) {
-            var index = i
-            if (i < 0) {
-                index = this.state.items.length + i
-            } else if (i >= this.state.items.length) {
-                index = i % this.state.items.length
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+const Slider =()=> {
+const inputRef=useRef()
+const btns=useRef()
+const [widthOfCarousel, setWidthOfCarousel]=useState()
+const [currentPosition, setCurrentPosition] =useState(0)
+const [currentSlide, setCurrentSlide]=useState(1)
+const countOfSlides =3
+    useEffect(() => {
+        console.log(inputRef.current.offsetWidth);
+        setWidthOfCarousel(inputRef.current.offsetWidth)
+      }, []);
+      const styleOfCarousel={
+        transform: `translateX(${currentPosition}px)`,
+        transition: "transform 0.5s ease" 
+      }
+      function next(){
+     
+          if(currentSlide>=countOfSlides){
+              setCurrentSlide(1)
+            setCurrentPosition(0)
+            console.log(currentSlide)
+          } else {
+            if(currentSlide<countOfSlides){
+            console.log(currentSlide)
+               setCurrentSlide(prev=> prev+1)
+              setCurrentPosition(prev=>prev-widthOfCarousel/3)
             }
-            level = this.state.active - i
-            items.push(<Item key={index} id={this.state.items[index]} level={level} />)
+            else {
+                setCurrentSlide(1)
+                setCurrentPosition(0)
+                console.log(currentSlide)
+            }
+          }
+      }
+      function prev(){
+          
+          if(currentSlide<=1){
+              console.log(currentSlide)
+              setCurrentSlide(countOfSlides)
+              setCurrentPosition(prev=>prev-(widthOfCarousel/3)*2)
+            } else {
+                setCurrentSlide(prev=> prev-1)
+          setCurrentPosition(prev=>prev+widthOfCarousel/3)
+          console.log(currentSlide)
         }
-        return items
-    }
-    
-    moveLeft() {
-        var newActive = this.state.active
-        newActive--
-        this.setState({
-            active: newActive < 0 ? this.state.items.length - 1 : newActive,
-            direction: 'left'
-        })
-    }
-    
-    moveRight() {
-        var newActive = this.state.active
-        this.setState({
-            active: (newActive + 1) % this.state.items.length,
-            direction: 'right'
-        })
-    }
-    
-    render() {
-        return(
-            <div id="carousel" className="noselect">
-                <div className="arrow arrow-left" onClick={this.leftClick}><i className="fi-arrow-left"></i></div>
-                <ReactCSSTransitionGroup 
-                    transitionName={this.state.direction}>
-                    {this.generateItems()}
-                </ReactCSSTransitionGroup>
-                <div className="arrow arrow-right" onClick={this.rightClick}><i className="fi-arrow-right"></i></div>
-            </div>
-        )
-    }
-}
+              }
+    return (
+        <div className="sliderPos">
+            <h1 className="topAnimeSlider">Популярные аниме этого месяца</h1>
+        <div className="slider">
+            <div style={styleOfCarousel} className="sliderCarousel" ref={inputRef}>
 
-class Item extends React.Component {
-    
-    constructor(props) {
-        super(props)
-        this.state = {
-            level: this.props.level
-        }
-    }
-    
-    render() {
-        const className = 'item level' + this.props.level
-        return(
-            <div className={className}>
-                {this.props.id}
+<div className="sliderParent">
+                <div className="sliderItem"><img className="sliderImage" src="https://w.forfun.com/fetch/f4/f4d402235f8f9a8c5655e7ece70c58c9.jpeg" alt="slider item" /></div>
+                <div className="sliderItem"><img className="sliderImage" src="https://avatars.mds.yandex.net/i?id=7366816eff910614d396cde5d77d718d9a8e3380-9065887-images-thumbs&ref=rim&n=33&w=188&h=188" alt="slider item" /></div>
+                <div className="sliderItem"><img className="sliderImage" src="https://ip1.anime-pictures.net/previews/6e8/6e8d0101857601be498c42a4832b0657_cp.jpg" alt="slider item" /></div>
+                </div>
+                <div className="sliderParent">
+                <div className="sliderItem"><img  className="sliderImage"src="https://i.ytimg.com/vi/h8n9YMlwKkw/maxresdefault.jpg" alt="slider item" /></div>
+                <div className="sliderItem"><img className="sliderImage" src="https://i.ytimg.com/vi/8Fl1-GZ5ZyQ/maxresdefault.jpg" alt="slider item" /></div>
+                <div className="sliderItem"><img className="sliderImage" src="https://avatars.mds.yandex.net/i?id=c00b0f778ba79b2c5251b7b1a0d407c01c57d4bc-9097903-images-thumbs&ref=rim&n=33&w=188&h=188" alt="slider item" /></div>
+                </div>
+                <div className="sliderParent">
+                <div className="sliderItem"><img  className="sliderImage"src="https://i.ytimg.com/vi/7xERyj7ssus/maxresdefault.jpg" alt="slider item" /></div>
+                <div className="sliderItem"><img  className="sliderImage"src="https://www.digiseller.ru/preview/319113/p1_3387264_1eef8aec.jpg" alt="slider item" /></div>
+                <div className="sliderItem"><img className="sliderImage" src="https://w.forfun.com/fetch/54/5485442fb7332d2a7a4db4105011fefa.jpeg" alt="slider item" /></div>
+                </div>
             </div>
-        )
-    }
+        
+        </div>
+        <div className="sliderInterface">
+            <button className="prev" onClick={()=> {
+                prev()
+            }}>←</button>
+            <div className="sliderBtns">
+            <button className="sliderBtn">1</button>
+            <button className="sliderBtn">2</button>
+            <button className="sliderBtn">3</button>
+            </div>
+            <button className="prev" onClick={()=> {
+             next()
+            }}>→</button>
+        </div>
+        </div>
+    )
 }
-
-var items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-ReactDOM.render(<Carousel items={items} active={0}/>, document.getElementById('app'))
+export default Slider; */

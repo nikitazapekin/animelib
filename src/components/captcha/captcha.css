@@ -17,12 +17,13 @@
   text-decoration: line-through;
   font-size: 20px;
   border-radius: 20px ;
+  text-align: center;
 }
 .enterCaptcha{
 background-color: transparent;
 outline: none;
 border: none;
-color: grey;
+color: #fff;
 border-bottom: 3px solid grey;
 height: 40px;
  cursor: pointer;

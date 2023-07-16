@@ -7,14 +7,15 @@
     top: 100px;
     border-radius: 20px;
     z-index: 11;
-transition: 2s ease-in-out;
+transition: 1s ease-in-out;
 }
 .registrationFormFon {
     width: 100%;
     height: 100%;
     max-width: 100%;
-    opacity: 0.5;
-    background-color: brown;
+
+    opacity: 0.75;
+    background-color: #222a27;
     position: absolute;
     left: 0;
     border-radius: 20px;
@@ -43,7 +44,7 @@ transform: translateX(-50%);
     background-color: transparent;
     outline: none;
     border: none;
-    color: grey;
+    color: #fff;
     border-bottom: 3px solid grey;
     height: 40px;
      cursor: pointer;
@@ -74,7 +75,8 @@ input[type="text"], input[type="email"], input[type="password"] {
    /* background: linear-gradient(45deg, rgb(255, 69, 1), rgb(1, 24, 157)); */
    background-color: rgb(216, 157, 47);
     height: 40px;
-    font-size: 32px;
+    width: 400px;
+    font-size: 26px;
     border: none;
     outline: none;
     color: #fff;
@@ -82,6 +84,7 @@ input[type="text"], input[type="email"], input[type="password"] {
     cursor: pointer;
     position: absolute;
     bottom: 0;
+    margin-bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -139,7 +142,7 @@ input[type="text"], input[type="email"], input[type="password"] {
         }
 
         .registrationForm:hover {
-            box-shadow: 0 0 0 0 35px greenyellow;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
         }
     .agreement{
 display: flex;
@@ -158,4 +161,13 @@ top: 200px
     text-align: left;
     padding-left: 50px;
 
+}
+.haveAnAccount {
+   
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+   bottom: 0;
+ cursor: pointer;
 }
