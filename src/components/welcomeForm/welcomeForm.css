@@ -1,0 +1,39 @@
+.welcomeForm {
+    position: absolute;
+/*justify-content: flex-start; */
+left: 0;
+width: 100%;
+max-width: 100%;
+top: 100%;
+height: 100%;
+top: 165px;
+margin-left: 50px;
+user-select: none;
+width: 700px;
+height: 500px;
+}
+
+.monika {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+   
+    bottom: 0;
+    
+}
+.skyMonika {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    left: 170px;
+    top: 100px
+
+} 
+.monikaText {
+    position: absolute;
+    font-weight: 800;
+    font-size: 28px;
+    max-width: 400px;
+    left: 270px;
+    top: 140px
+}

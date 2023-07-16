@@ -1,0 +1,116 @@
+.searchWindow{
+    width: 600px;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+    border-radius: 20px;
+   /* position: relative;*/
+   position: absolute;
+top: 100px;
+z-index: 100;
+
+}
+.searchWindowForm{
+    width: 100%;
+    max-width: 90%;
+    position: absolute;
+    transform: translateX(-50%);
+    padding-left: 20px;
+    top: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 30px;
+    font-size: 20px;
+}
+.searchWindowFon {
+    opacity: 0.3;
+    background-color: rgb(83, 83, 83);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    border-radius: 20px;
+}
+.usuallySearch, .usuallySearchTitle {
+    position: absolute;
+}
+.usuallySearchTitle {
+    top: 50px;
+    color: #fff;
+    padding-left: 20px;
+}
+.usuallySearch{
+
+    max-width: 90%;
+    width: 100%;
+    display: flex;
+    top: 90px;
+    color: #fff;
+    padding-left: 20px;
+    height: 40px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    line-height: 20px;
+}
+.usuallySearchItem {
+    cursor: pointer;
+   color: #fff;
+   position: relative;
+   margin-left: 25px;
+padding-left: 7px; 
+padding-right: 7px; 
+width: auto;
+height: auto;
+text-align: center;
+}
+.usuallySearchItemFon{
+    background-color: rgb(87, 87, 87);
+    position: absolute;
+ 
+   width: 100%;
+   max-width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+.closeSearchBtn {
+    position: absolute;
+    right: 0;
+    top: 32px;
+    width: 30px;
+    height: 30px;
+  
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 20px;
+ 
+}
+.closeSearchBtnLine1, .closeSearchBtnLine2 {
+    width: 20px;
+    height: 3px;
+    background-color:  black;
+    position: absolute;
+    z-index: 3;
+}
+.closeSearchBtnLine1 {
+    transform: rotate(45deg) translateY(5px) translateX(13px) ;
+}
+.closeSearchBtnLine2 {
+    transform: rotate(135deg) translateY(-13px) translateX(5px) ;
+}
+.closeSearchBtnFon {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    background-color: gray;
+    opacity: 0.5;
+    border-radius: 50%;
+    z-index: -1;
+
+}
