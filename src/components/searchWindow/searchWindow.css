@@ -26,8 +26,9 @@ z-index: 100;
     font-size: 20px;
 }
 .searchWindowFon {
-    opacity: 0.3;
-    background-color: rgb(83, 83, 83);
+    opacity: 0.75;
+   /* background-color: rgb(83, 83, 83); */
+   background-color: #222a27;
     width: 100%;
     position: absolute;
     left: 0;

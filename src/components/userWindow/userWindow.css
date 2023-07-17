@@ -10,8 +10,10 @@ z-index: 100;
 }
 .userWindowFon{
     
-        opacity: 1;
-        background-color: rgb(83, 83, 83);
+      /*  opacity: 1;
+        background-color: rgb(83, 83, 83); */
+        opacity: 0.75;
+        background-color: #222a27;
         width: 100%;
         position: absolute;
         left: 0;
@@ -22,19 +24,33 @@ z-index: 100;
 }
 .userWindowFonBlock{
     
-    opacity: 1;
-    background-color: rgb(83, 83, 83);
+ /*   opacity: 1;
+    background-color: rgb(83, 83, 83); */
+  /*  opacity: 0.75; */
   
-    width: 50px;
+   /* background-color: #222a27; */
+  /* background: linear-gradient(270deg, transparent, red );
+  
+    width: 20px;
     position: absolute;
   
-    height: 50px;
+    height: 20px;
     z-index: -1;
  top: -5px;
  transform: rotate(45deg);
  right: 0;
- margin-right: 20px;
-
+ margin-right: 20px; */
+ /*background-color: rgb(83, 83, 83); */
+  opacity: 0.75; 
+ width: 0;
+ height: 0;
+ border-left: 15px solid transparent;
+ border-right: 15px solid transparent;
+ border-bottom: 20px solid #222a27;;
+position: absolute;
+right: 0;
+margin-right: 30px;
+transform: translateY(-18px);
 }
 
 
@@ -84,6 +100,7 @@ z-index: 100;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    color: #fff;
 }
 #toggle_checkbox
 {

@@ -1,0 +1,129 @@
+.loginForm{
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+ width: 500px;
+ height: 500px;
+ top: 100px;
+ border-radius: 20px;
+ z-index: 11;
+transition: 1s ease-in-out; 
+}
+.loginFormFon {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+
+    opacity: 0.75;
+    background-color: #222a27;
+    position: absolute;
+    left: 0;
+    border-radius: 20px;
+}
+
+
+
+.cube1, .cube2, .cube3, .cube4 {
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: black;
+    transform: rotate(45deg);
+    transition: 1s ease-in-out;
+}
+.cube1 {
+    border: 2px solid greenyellow;
+    bottom: 0; 
+    left: 30px;
+}
+.cube2 {
+    border: 2px solid red;
+    bottom: 30px; 
+    left: 0px;
+}
+.cube3 {
+    border: 2px solid orangered;
+    top: 0; 
+    right: 30px;
+}
+.cube4 {
+    border: 2px solid blue;
+    top: 30px; 
+    right: 0px;
+}
+
+
+
+.loginForm:hover .cube1 {
+    left: 100%;
+    transform: rotate(135deg);
+   
+  }
+  .loginForm:hover .cube2 {
+    bottom: 100%;
+      transform: rotate(135deg);
+  
+    }
+  
+  
+    .loginForm:hover .cube3 {
+      top: 100%;
+        transform: rotate(135deg);
+      
+      }
+      .loginForm:hover .cube4 {
+        right: 100%;
+            transform: rotate(135deg);
+          
+          }
+  
+          .loginForm:hover {
+              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          }
+          .loginTitle {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            z-index: 2;
+          }
+
+          .loginBlock {
+            position: absolute;
+           left: 50%;
+           transform: translateX(-50%);
+          display: flex;
+          flex-direction: column;
+            width: 100%;
+            max-width: 80%;
+          height: 350px;
+            z-index: 1;
+            top: 100px
+        }
+        .loginFormBtn {
+            background-color: rgb(216, 157, 47);
+            height: 40px;
+            width: 400px;
+            font-size: 26px;
+            border: none;
+            outline: none;
+            color: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .haveNoAccount {
+   
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) ;
+           bottom: 0;
+         cursor: pointer;
+         margin-bottom: 50px;
+        }

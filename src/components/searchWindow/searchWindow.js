@@ -2,14 +2,13 @@
 
 import "./searchWindow.css"
 import { setSearchWindow } from "../../store/reducers"
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
 const SearchWindow = () => {
     const dispatch = useDispatch()
     const searchForm = useRef()
     const inputForm = useRef()
-    const window = useSelector((state) => state.toolkit.window);
 
     useEffect(() => {
         const items = searchForm.current.children;
@@ -19,10 +18,52 @@ const SearchWindow = () => {
             });
         });
     }, []);
+      const search=useRef()
+      const [value, setValue]=useState([])
+      useEffect(()=> {
 
+      console.log(search.current)
+      search.current.addEventListener('click', function(event) {
+        let clickX = event.clientX;
+        let clickY = event.clientY;
+
+      //  var divRect = divElement.getBoundingClientRect();
+      if(search.current!=undefined){
+      let divRect=search.current.getBoundingClientRect();
+        let divLeft = divRect.left;
+        let divTop = divRect.top;
+        let divRight = divRect.right;
+        let divBottom = divRect.bottom;
+
+        if (clickX >= divLeft && clickX <= divRight && clickY >= divTop && clickY <= divBottom) {
+ //setIsClicked(true)
+ // dispatch(setSearchWindow());
+ 
+ let count=0;
+ count++;
+ setValue(prev=>[...prev, count] )
+ console.log(value)
+ //val=true
+} 
+
+else {
+ // console.log(0);
+ dispatch(setSearchWindow());
+}
+      }
+
+
+    
+
+      });
+    },[])
+    useEffect(() => {
+        console.log(value); // Выводим значение массива value в консоль после каждого обновления
+      }, [value]);
+    
     return (
-        <div className="searchWindow">
-            <input ref={inputForm} className="searchWindowForm" placeholder="Что ищем, семпай?" />
+        <div className="searchWindow" ref={search}>
+            <input ref={inputForm} className="searchWindowForm" placeholder="Что ищем, семпай?"  />
           
             <div className="closeSearchBtn" onClick={()=> {
                   dispatch(setSearchWindow());
