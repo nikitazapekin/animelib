@@ -12,6 +12,10 @@ export const toolkitSlice = createSlice({
       username: "",
     },
     reducers: {
+      setUsername(state, action){
+        state.username=action.payload
+        
+            },
       increment(state) {
         console.log(state.count)
         state.count = state.count + 1;
@@ -43,9 +47,7 @@ export const toolkitSlice = createSlice({
         }
       }
     },
-    setUsername(state, action){
-state.username=action.payload
-    }
+
   });
   
   export const { increment, decrement, addTodo, removeLastTodo, setSearchWindow, setUserWindow, setUsername } = toolkitSlice.actions;

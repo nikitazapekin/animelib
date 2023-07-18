@@ -1,0 +1,10 @@
+.userOverviewForm {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+}
+.dateOfSignUp {
+    position: absolute;
+   top: 300px
+}

@@ -13,8 +13,7 @@ import "./homepage.css"
 import Slider from "../../components/slider/slider";
 const Homepage =()=> {
   
-    const window = useSelector((state) => state.toolkit.window);
-    const userWindow = useSelector((state) => state.toolkit.userWindow);
+ 
     return (
         <div className="homepage" >
 

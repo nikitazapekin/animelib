@@ -6,7 +6,6 @@ const UserWindow=()=> {
     const dispatch=useDispatch()
     return (
         <div className="userWindow" onBlur={()=> {
-            console.log(123)
             dispatch(setUserWindow());
         }}>
          

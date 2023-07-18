@@ -1,0 +1,35 @@
+.addLogoOfUser {
+    position: relative;
+    z-index: 345;
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    margin-left: 50px;
+}
+.userPhoto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+   left: 0;
+transform: translateX(-100px);
+z-index: 123;
+
+}
+.plus{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   background-color: blue;
+   color: #fff;
+cursor: pointer;
+line-height: 36px;
+text-align: center;
+position: absolute;
+left: 160px;
+z-index: 1222;
+top: 140px;
+font-size: 32px;
+}
