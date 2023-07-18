@@ -9,7 +9,7 @@ const RegistrationForm =()=> {
             <input type="email" placeholder="Введите почту " className="typeMail  regItem" />
             <input type="password" placeholder="Введите пароль" className="typePassword  regItem" />
            <Captcha />
-            <button className="registrationFormBtn ">Зарегистрироваться</button>
+         <Link to="/user">  <button className="registrationFormBtn ">Зарегистрироваться</button> </Link> 
             <div className="haveAnAccount"><Link style={{textDecoration: "none", color: "#fff"}} to="/login">Есть аккаунт?</Link></div>
             <div className="agreement">
             <input type="checkbox" className="agreementBtn" />

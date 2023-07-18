@@ -51,6 +51,9 @@ z-index: -1;
     transition: 0.5s;
     cursor: pointer;
 }
+.zakladk {
+    transform: translateY(5px);
+}
 .navigationItem:hover {
    border-bottom: 2px solid green;
 }

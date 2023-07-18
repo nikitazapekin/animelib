@@ -24,7 +24,7 @@ const Navigation=()=> {
     <b className="navigationItem"  onClick={()=> dispatch(setSearchWindow())}>ПОИСК</b>
 </div>
 <div className="navigationRight">
-    <b className="navigationItem">ЗАКЛАДКИ</b>
+    <b className="navigationItem zakladk"><Link style={{textDecoration: "none", color: "#fff"}} to="/zakladki">ЗАКЛАДКИ</Link></b>
    <div className="navigationItem">
   
 

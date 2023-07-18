@@ -8,7 +8,8 @@ export const toolkitSlice = createSlice({
       count: 0,
       todos: ['sccf', 'dsdw', 'ddwwd'],
       window: false,
-      userWindow: false
+      userWindow: false,
+      username: "",
     },
     reducers: {
       increment(state) {
@@ -32,7 +33,6 @@ export const toolkitSlice = createSlice({
       else {
         state.window=false
       }
-    
       },
       setUserWindow(state) {
         if(!state.userWindow){
@@ -42,10 +42,13 @@ export const toolkitSlice = createSlice({
           state.userWindow=false
         }
       }
+    },
+    setUsername(state, action){
+state.username=action.payload
     }
   });
   
-  export const { increment, decrement, addTodo, removeLastTodo, setSearchWindow, setUserWindow } = toolkitSlice.actions;
+  export const { increment, decrement, addTodo, removeLastTodo, setSearchWindow, setUserWindow, setUsername } = toolkitSlice.actions;
   //export default toolkitSlice.reducers;
   export default toolkitSlice.reducer;
 

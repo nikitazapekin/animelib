@@ -1,0 +1,71 @@
+.loginForm{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+     width: 500px;
+     height: 500px;
+     top: 100px;
+     border-radius: 20px;
+     z-index: 11;
+    transition: 1s ease-in-out; 
+    }
+    .loginFormFon {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    
+        opacity: 0.75;
+        background-color: #222a27;
+        position: absolute;
+        left: 0;
+        border-radius: 20px;
+    }
+    
+    .whatYourName {
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 123;
+        white-space: nowrap;
+    }
+    .enterName {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+     width: 100%;
+     max-width: 80%;
+        height: 60px;
+        z-index: 1123;
+        top: 200px;
+     font-size: 25px;
+        color: #fff;
+    }
+
+    .loginFormBtnn {
+        background-color: rgb(216, 157, 47);
+        height: 40px;
+        width: 400px;
+        font-size: 26px;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 20px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 134;
+    }
+
+    .enterNameRequest{
+        position: absolute;
+        color: red;
+z-index: 123;
+font-size: 20px;
+right: 0;
+top: 195px;
+padding-right: 50px;
+    }
