@@ -6,8 +6,8 @@ const RegistrationForm =()=> {
         <div className="registrationForm">
             <h1 className="registrationTitle">Регистрация</h1>
             <div className="registrationBlock">
-            <input type="email" placeholder="Введите почту " className="typeMail  regItem" />
-            <input type="password" placeholder="Введите пароль" className="typePassword  regItem" />
+            <input type="email" placeholder="Введите почту " className="typeMail  regItem" required name="'prompt" />
+            <input type="password" placeholder="Введите пароль" className="typePassword  regItem" required name="'prompt" />
            <Captcha />
          <Link to="/user">  <button className="registrationFormBtn ">Зарегистрироваться</button> </Link> 
             <div className="haveAnAccount"><Link style={{textDecoration: "none", color: "#fff"}} to="/login">Есть аккаунт?</Link></div>

@@ -52,7 +52,7 @@ const AddLogoOfUser = () => {
   const myForm = useRef(null);
   const imageInput = useRef(null);
   const [link, setLink] = useState(User);
-
+const [isAdded, setIsAdded]=useState(false)
   useEffect(() => {
     const handleClick = () => {
       imageInput.current.click();
@@ -67,6 +67,7 @@ const AddLogoOfUser = () => {
 
         reader.onload = function (e) {
           setLink(e.target.result);
+          setIsAdded(true)
         };
 
         reader.readAsDataURL(file);
@@ -95,9 +96,7 @@ const AddLogoOfUser = () => {
         className="userPhoto"
         onClick={() => imageInput.current.click()}
       />
-      <div className="plus">
-        +
-      </div>
+   {!isAdded ?   <div className="plus">  +  </div>  : null}
     </div>
   );
 };
